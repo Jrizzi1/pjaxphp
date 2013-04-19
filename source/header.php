@@ -1,6 +1,6 @@
 <html>
 <head>
-<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
 <script src="js/jquery.cookie.js"></script>
 <script src="js/jquery.pjax.js"></script>
 <script type="text/javascript">
@@ -8,15 +8,13 @@
 
 var direction = "right";
 $(document).ready(function(){
-  $('a').pjax({
-    container: '#main'
-  });
-  	
-$('#main').on('pjax:start', function() {
+$(document).pjax('a', '#main')
+
+$(document).on('pjax:start', function() {
   $(this).addClass('loading')
 })
 
-$('#main').on('pjax:end', function() {
+$(document).on('pjax:end', function() {
   $(this).removeClass('loading')
 })
 
@@ -44,6 +42,6 @@ $('#main').on('pjax:end', function() {
     
 </head>
 <body>
-<? $date = date("Y-m-d H:i:s");
+<?php $date = date("Y-m-d H:i:s");
 echo "<p ><strong style='color:green'> $date</strong> (Time should only change on refresh!)</p>";
 ?>
