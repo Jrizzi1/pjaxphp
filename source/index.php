@@ -1,4 +1,7 @@
-<?php if($_SERVER["HTTP_X_PJAX"]): 
+<?php
+$title = "Home page";
+if($_SERVER["HTTP_X_PJAX"]): 
+echo "<title>{$title}</title>";
 ?>
 <h1>PJAX using PHP</h1>
 <ul class='header'>
