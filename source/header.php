@@ -34,6 +34,11 @@
 
 </head>
 <body>
-<?php $date = date("Y-m-d H:i:s");
+
+<header>
+<?php
+// Get current date and show
+$date = date("Y-m-d H:i:s");
 echo "<p ><strong style='color:green'> $date</strong> (Time should only change on refresh!)</p>";
 ?>
+</header>
