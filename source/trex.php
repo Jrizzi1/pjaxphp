@@ -4,6 +4,7 @@ $body = "<ul class='header'><li><a href='index.php' data-pjax='main'>back</a></l
 
  if($_SERVER["HTTP_X_PJAX"]): 
 	echo $body;
+	echo "<title>{$title}</title>";
 
 else: 
 include("header.php");
