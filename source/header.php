@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title><?php echo $title; ?></title>
@@ -8,11 +9,9 @@
 	var direction = "right";
 	$(document).ready(function(){
 		$(document).pjax('a', '#main');
-
 		$(document).on('pjax:start', function() {
 			$(this).addClass('loading')
 		});
-
 		$(document).on('pjax:end', function() {
 			$(this).removeClass('loading')
 		});
@@ -20,14 +19,12 @@
 </script>
 
 <style> 
-
 	#main {
 		font-family:Helvetica,Arial,sans-serif;	
 		width:30%;  
 		opacity: 1;
 		transition: opacity 0.20s linear;
 	}
-
 	#main.loading {
 		opacity: 0.5;
 	}	
