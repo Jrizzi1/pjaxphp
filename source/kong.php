@@ -1,6 +1,7 @@
 <?php 
 $title = 'King Kong';
-$body = "<ul class='header'><li><a href='index.php' data-pjax='main'>back</a></li></ul><h2>$title</h2><img src='images/Kong1.jpg' />";
+include("status.php");
+$body = "<ul class='header'><li><a href='index.php' data-pjax='main'>back</a></li></ul><h2>$title</h2><img src='images/Kong1.jpg' />" . $what;
 
 if($_SERVER["HTTP_X_PJAX"]): 
 
@@ -16,8 +17,4 @@ echo '<div id="main">'.$body.'</div>';
 include("footer.php");	
 
 endif;
-
-echo "<pre>";
-echo "Page loaded with PJAX: ".$_SERVER["HTTP_X_PJAX"];
-echo "</pre>";
 ?>
