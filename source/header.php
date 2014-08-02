@@ -1,5 +1,6 @@
 <html>
 <head>
+<title><?php echo $title; ?></title>
 <script src="js/jquery-1.9.1.js"></script>
 <script src="js/jquery.cookie.js"></script>
 <script src="js/jquery.pjax.js"></script>
